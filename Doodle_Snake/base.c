@@ -60,7 +60,7 @@ void put_money(void)
 	det=0;
 }
 
-//locate
+//locate cursor
 void gotoxy(int x, int y)		
 {
     COORD coord = {x, y};
@@ -163,7 +163,7 @@ void eat_change(void)
 	}
 }
 
-//判定当前蛇的速度
+//judge the speed of the snake
 void judge_speed(int i)
 {
 	switch(i)    //判定蛇的速度等级（可改）
@@ -217,14 +217,14 @@ void judge_level(int i)              //根据蛇的长度来判断等级
 }
 */
 
-//颜色函数
+//change color
 void color(int b)          
 {
     HANDLE hConsole = GetStdHandle((STD_OUTPUT_HANDLE)) ;   //空的地方就是底色
     SetConsoleTextAttribute(hConsole,b) ;
 } 
 
-//以下用于判断是否重来
+//judge whether you play again 
 int isagain(void)
 {
 	char i,c;

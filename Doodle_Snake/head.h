@@ -2,11 +2,11 @@
 #include<windows.h>
 #include<stdlib.h>
 #include<stdio.h>
-#include<conio.h>                   //kbhit使用
-#include<time.h>                    //获取随机种子使用
+#include<conio.h>                   //use for kbhit
+#include<time.h>                    //use for random number
 #include <malloc.h>
-#include<mmsystem.h>                //播放音乐使用
-#pragma comment (lib,"winmm.lib")   //播放音乐使用
+#include<mmsystem.h>                //use for music
+#pragma comment (lib,"winmm.lib")   //use for music
 
 
 #define SNAKE_MAX_LENGTH 20
@@ -30,7 +30,7 @@ void gameresult(int);
 void eat_change(void);
 //when it was killed by itself,return 0;otherwise return 1;
 int zisha(void);
-//locate
+//locate cursor 
 void gotoxy(int, int);		
 //change color
 void color(int);
@@ -39,21 +39,19 @@ int isagain(void);
 //judge the speed of the snake
 void judge_speed(int);
 
-//char map[BL][BW];   //横为BL,竖为BW
-
 //define vars for snake ,notice name of vars in C
 int snakeX[SNAKE_MAX_LENGTH];
 int snakeY[SNAKE_MAX_LENGTH];
 int snakeLength;
 
-//食物的坐标
+//position of food
 struct
 {
 	int x;
 	int y;               
 }food;
 
-//食物出现许可
+//license of puting food 
 int det;               
 
 //save the last location of the snake tail        
